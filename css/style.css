@@ -24,6 +24,8 @@ body {
 
 img {
   max-width: 100%;
+  display: block;
+  border-radius: 5px;
 }
 
 /* grid structure */
@@ -35,18 +37,6 @@ img {
     "header header header"
     "sidenav content merchant"
     "footer footer footer";
-}
-
-.main-content-container {
-  grid-area: content;
-}
-
-.merchandise-container {
-  grid-area: merchant;
-}
-
-.footer-container {
-  grid-area: footer;
 }
 
 /* header */
@@ -105,9 +95,39 @@ img {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .side-nav-container li a:hover {
   background: #b07dfb;
+}
+
+/* main */
+
+.main-content-container {
+  grid-area: content;
+}
+
+/* merchan */
+
+.merchandise-container {
+  grid-area: merchant;
+  background: #fafbfc;
+  display: grid;
+  align-content: flex-start;
+  padding: 30px;
+  gap: 30px;
+}
+
+/* footer */
+
+.footer-container {
+  grid-area: footer;
+  background: linear-gradient(135deg, #8844ee, #b07dfb);
+}
+
+.footer-container p {
+  color: #fff;
+  text-align: center;
+  padding: 30px;
 }
