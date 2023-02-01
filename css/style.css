@@ -21,3 +21,40 @@ a {
 body {
   font-family: "Vollkorn", Georgia, serif;
 }
+
+img {
+  max-width: 100px;
+}
+
+/* grid structure */
+
+.container-grid-structure {
+  display: grid;
+  grid-template-columns: minmax(160px, 1fr) 3fr 300px;
+  grid-template-areas:
+    "header header header"
+    "sidenav content merchant"
+    "footer footer footer";
+}
+
+.header-container {
+  grid-area: header;
+}
+
+.side-nav-container {
+  grid-area: sidenav;
+}
+
+.main-content-container {
+  grid-area: content;
+}
+
+.merchandise-container {
+  grid-area: merchant;
+}
+
+.footer-container {
+  grid-area: footer;
+}
+
+/* header */
