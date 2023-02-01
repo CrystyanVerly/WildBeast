@@ -37,10 +37,6 @@ img {
     "footer footer footer";
 }
 
-.side-nav-container {
-  grid-area: sidenav;
-}
-
 .main-content-container {
   grid-area: content;
 }
@@ -90,4 +86,28 @@ img {
 
 .header-container li + li {
   margin-left: 30px;
+}
+
+/* sidenav */
+
+.side-nav-container {
+  grid-area: sidenav;
+  background: #fafbfc;
+  padding: 30px;
+}
+
+.side-nav-container li a {
+  display: block;
+  min-width: 60px;
+  max-width: 100px;
+  margin: 0 auto 30px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0px rgba(44, 44, 44, 0.15);
+  transition: .3s ease-out;
+}
+
+.side-nav-container li a:hover {
+  background: #b07dfb;
 }
