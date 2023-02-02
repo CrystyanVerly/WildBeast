@@ -253,3 +253,72 @@ p {
   text-align: center;
   padding: 30px;
 }
+
+/* arrow animation */
+
+@keyframes arrow {
+  from {
+    right: 30px;
+  }
+  to {
+    right: 20px;
+  }
+}
+
+/* responsive */
+
+@media (max-width: 1200px) {
+  .container-grid-structure {
+    grid-template-areas:
+      "header header header"
+      "sidenav content content"
+      "sidenav merchant merchant"
+      "footer footer footer";
+  }
+}
+
+@media (max-width: 760px) {
+  .container-grid-structure {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "header"
+      "sidenav"
+      "content"
+      "merchant"
+      "footer";
+  }
+  .header-container {
+    grid-template-columns: auto;
+  }
+  .header-container li + li {
+    margin-left: 10px;
+  }
+  .logo-brand {
+    margin-bottom: 20px;
+  }
+  .header-container nav a {
+    font-size: 1em;
+  }
+  .side-nav-container {
+    position: relative;
+    padding: 0 30px;
+    overflow-x: scroll;
+  }
+  .side-nav-container::after {
+    content: "→";
+    position: absolute;
+    top: 5px;
+    right: 30px;
+    color: rgba(0, 0, 0, 0.3);
+    animation: arrow 0.5s ease-in 0s infinite alternate;
+  }
+  .side-nav-container ul {
+    display: flex;
+  }
+  .side-nav-container li {
+    flex: 1 0 60px;
+  }
+  .side-nav-container li a {
+    margin: 30px 30px 30px 0;
+  }
+}
